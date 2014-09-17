@@ -18,7 +18,7 @@ def landing_page(request):
         item_count_obj = ItemCount.objects.get(id=1)
     except:
         item_count_obj = ItemCount()
-        item_count_obj.total_count = 20
+        item_count_obj.total_count = 250
         item_count_obj.save()
 
     total_count = int(item_count_obj.total_count)
@@ -48,7 +48,7 @@ def adminpanel(request):
         item_count_obj = ItemCount.objects.get(id=1)
     except:
         item_count_obj = ItemCount()
-        item_count_obj.total_count = 20
+        item_count_obj.total_count = 250
         item_count_obj.save()
 
     form = SetItemCountForm(instance=item_count_obj)
@@ -82,7 +82,7 @@ def video_scraping(request):
             item_count_obj = ItemCount.objects.get(id=1)
         except:
             item_count_obj = ItemCount()
-            item_count_obj.total_count = 20
+            item_count_obj.total_count = 250
             item_count_obj.save()
         poster_columns = soup.findAll('td', {'class':'posterColumn'})
         print len(poster_columns)

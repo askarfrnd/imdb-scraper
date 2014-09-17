@@ -5,7 +5,7 @@ class ItemCount(models.Model):
     total_count = models.IntegerField(default=250)
 
     def __unicode__(self):
-        return self.total_count
+        return str(self.total_count)
 
 
 class Video(models.Model):
